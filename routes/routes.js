@@ -54,6 +54,7 @@ router.get('/getCartData', AddToCartController.getCartData);
 router.get('/getCartData/:id', AddToCartController.getCartDataByUserId);
 router.put('/updateQtyPlus/:id', AddToCartController.updateQuantityPlus);
 router.put('/updateQtyMinus/:id', AddToCartController.updateQuantityMinus);
+router.delete('/deleteCartItem/:id', AddToCartController.deleteCartItem)
 router.get('/addToCartsTruncate/:id', AddToCartController.truncateTable);
 
 // Pending cart routes
