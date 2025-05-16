@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 
 const ItemSchema = new mongoose.Schema({ 
+    seller_id :{
+        type :mongoose.Schema.Types.ObjectId,
+        ref:'User',
+        required : true
+    },
     item_name: { 
         type: String,
         required: true 
