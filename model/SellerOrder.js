@@ -3,12 +3,22 @@ const mongoose = require("mongoose");
 const SellerOrderSchema = new mongoose.Schema({
   seller_id :{
     type :mongoose.Schema.Types.ObjectId,
-    ref:'Seller',
+    ref:'User',
+    required : true
+  },
+  user_id : {
+    type :mongoose.Schema.Types.ObjectId,
+    ref:'User',
+    required : true
+  },
+  user_name : {
+    type : String,
     required : true
   },
   item_id: {
-    type: String,
-    required: true,
+    type :mongoose.Schema.Types.ObjectId,
+    ref:'Item',
+    required : true
   },
   item_name: {
     type: String,
@@ -19,7 +29,7 @@ const SellerOrderSchema = new mongoose.Schema({
     required: true,
   },
   item_price: {
-    type: String, // You can change to Number for calculations
+    type: Number,
     required: true,
   },
   item_dsc: {
@@ -27,7 +37,7 @@ const SellerOrderSchema = new mongoose.Schema({
     required: true,
   },
   item_qty: {
-    type: String, // Consider using Number
+    type: Number, // Consider using Number
     required: true,
   },
   item_image: {
@@ -35,11 +45,11 @@ const SellerOrderSchema = new mongoose.Schema({
     required: true,
   },
   item_discount: {
-    type: String,
+    type: Number,
     default: null,
   },
   item_subtotal: {
-    type: String,
+    type: Number,
     required: true,
   },
 }, {
