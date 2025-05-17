@@ -123,7 +123,11 @@ const PendingCartController = {
       await item.save();
       res.json({ message: "Cart quantity decreased", result: item });
     } catch (error) {
-      res.status(500).json({ success: false, message: "Error decreasing quantity", error: error.message });
+      res.status(500).json({ 
+        success: false,
+        message: "Error decreasing quantity",
+        error: error.message 
+      });
     }
   },
 
