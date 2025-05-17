@@ -1,3 +1,4 @@
+const { loggers } = require('winston');
 const AddToCart = require('../model/AddToCart'); // Import the Mongoose model
 
 const AddToCartController = {
@@ -139,7 +140,7 @@ const AddToCartController = {
       })
 
     } catch (error) {
-      console.log(error);
+      loggers.error(error);
       return res.status(500).json({
         success: false,
         message: "Failed to update cart quantity",
@@ -161,17 +162,16 @@ const AddToCartController = {
           message: "Item not found in cart"
         });
       }
-
       updateQuantity.item_qty -= 1;
 
      // Delete the item if quantity is zero
       if (updateQuantity.item_qty === 0) {
-        await AddToCart.findByIdAndDelete(id);
+        const data = await AddToCart.findByIdAndDelete(id);
 
         return res.status(200).json({
           success: true,
           message: "Cart Quantity Updated",
-          result: res
+          result: data
         });
       }
 
@@ -179,7 +179,7 @@ const AddToCartController = {
       const item_disc = (item_total / 100) * updateQuantity.item_discount;
       updateQuantity.item_subtotal = item_total - item_disc;
       
-      const res = await AddToCart.findByIdAndUpdate(
+      const data = await AddToCart.findByIdAndUpdate(
         {_id : id},
         updateQuantity,
         {new : true}
@@ -188,10 +188,11 @@ const AddToCartController = {
       return res.status(200).json({
         success: true,
         message: "Cart Quantity Updated",
-        result: res
+        result: data
       });
 
     } catch (error) {
+      console.log(error);
       return res.status(500).json({
         success: false,
         message: "Failed to update cart quantity",
