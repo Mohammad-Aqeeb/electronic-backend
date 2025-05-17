@@ -10,7 +10,6 @@ const AddProductController = {
     const {item_name, item_category, item_price, item_dsc, item_qty, item_discount } = req.body;
     const file = req.files.item_image;
 
-    console.log(req.files.item_image);
     if (!file) {
       return res.status(400).json({
         success: false,
