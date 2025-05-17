@@ -20,6 +20,11 @@ const SellerOrderSchema = new mongoose.Schema({
     ref:'Item',
     required : true
   },
+  order_id : {
+    type : mongoose.Schema.Types.ObjectId,
+    ref : 'MyOrder',
+    required : true
+  },
   item_name: {
     type: String,
     required: true,
@@ -37,7 +42,7 @@ const SellerOrderSchema = new mongoose.Schema({
     required: true,
   },
   item_qty: {
-    type: Number, // Consider using Number
+    type: Number,
     required: true,
   },
   item_image: {
@@ -52,6 +57,11 @@ const SellerOrderSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  order_status: {
+    type: String,
+    enum: ["Pending", "Confirmed", "Packed", "Shipped", "Out for Delivery", "Delivered", "Cancelled" ],
+    default: "Pending"
+  }
 }, {
   timestamps: true
 });

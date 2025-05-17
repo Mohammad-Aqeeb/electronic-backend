@@ -20,7 +20,7 @@ const MyOrderSchema = new mongoose.Schema({
     required: true,
   },
   item_price: {
-    type: Number, // You can change to Number for calculations
+    type: Number,
     required: true,
   },
   item_dsc: {
@@ -28,7 +28,7 @@ const MyOrderSchema = new mongoose.Schema({
     required: true,
   },
   item_qty: {
-    type: Number, // Consider using Number
+    type: Number,
     required: true,
   },
   item_image: {
@@ -43,6 +43,11 @@ const MyOrderSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  order_status: {
+    type: String,
+    enum: ["Pending", "Confirmed", "Packed", "Shipped", "Out for Delivery", "Delivered", "Cancelled" ],
+    default: "Pending"
+  }
 }, {
   timestamps: true
 });
