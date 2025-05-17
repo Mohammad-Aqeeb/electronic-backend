@@ -1,6 +1,6 @@
 const Order = require("../model/Order");
 
-const sellerOrderController = {
+const OrderController = {
     getSellerOrder : async (req, res)=>{
         try{
             const id = req.params.sellerId;
@@ -45,7 +45,7 @@ const sellerOrderController = {
     
     
         try {
-          const order = await sellerOrder.findByIdAndUpdate(
+          const order = await Order.findByIdAndUpdate(
             id,
             { order_status },
             { new: true }
