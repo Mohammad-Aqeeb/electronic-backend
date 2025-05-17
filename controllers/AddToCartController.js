@@ -7,7 +7,6 @@ const AddToCartController = {
   addToCart: async (req, res) => {
     const { user_id, item_id, item_name, item_category, item_price, item_dsc, item_qty, item_image, item_discount } = req.body;
     console.log(user_id);
-    console.log(item_id);
     try {
       // Calculate the subtotal
       const item_total = item_price * item_qty;
