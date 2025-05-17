@@ -62,7 +62,6 @@ const UserController = {
             return res.status(400).json({
                 success : false,
                 message : "Email and password are required",
-                error: error.message
             });
         }
     
@@ -73,10 +72,9 @@ const UserController = {
                 return res.status(400).json({
                     success : false,
                     message : "User not found",
-                    error: error.message
                 });
             }
-    
+
             // Compare password with hashed password
             const isMatch = await bcrypt.compare(password, user.password);
 
