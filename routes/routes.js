@@ -69,8 +69,10 @@ router.put('/updateQtyMinusLocal/:id', PendingCartController.updateLocalQuantity
 router.post('/postMyOrder', MyOrdersController.postMyOrder);
 router.get('/getMyOrder/:id', MyOrdersController.getMyOrder);
 router.get('/cancelOrder/:id', MyOrdersController.cancelOrder);
+router.put('/updateOrderStatus/:id', MyOrdersController.updateOrderStatus);
+router.get('/order/track/:id', MyOrdersController.getOrderById);
 
-
-router.get('/seller-orders/:sellerId', sellerOrder.getSellerOrder)
+router.get('/seller-orders/:sellerId', sellerOrder.getSellerOrder);
+router.put('/updateOrderStatusInSeller/:id', sellerOrder.updateOrderStatus);
 
 module.exports = router;
