@@ -2,16 +2,18 @@ const express = require('express');
 const router = express.Router();
 
 const itemsController = require('../controllers/itemsController.js');
+const AddProductController = require('../controllers/AddProductController.js');
 const AddToCartController = require('../controllers/AddToCartController.js');
 const UserController = require('../controllers/UserController.js');
-const UsersController = require("../controllers/UsersController.js");
 const SellerController = require('../controllers/SellerController.js');
+const UsersController = require("../controllers/UsersController.js");
 const PendingCartController = require('../controllers/PendingCartController.js');
 const MyOrdersController = require('../controllers/MyOrdersControlle.js');
-const AddProductController = require('../controllers/AddProductController.js');
+const sellerOrder = require('../controllers/sellerOrder.js');
+const OrderController = require('../controllers/OrderController.js');
+const TrackOrder = require("../controllers/TrackOrderController.js");
 
 const auth = require("../middleware/auth.js");
-const sellerOrder = require('../controllers/sellerOrder.js');
 
 // User routes
 // router.post('/userSignup', UserController.userRegister);
@@ -66,13 +68,22 @@ router.put('/updateQtyPlusLocal/:id', PendingCartController.updateLocalQuantityP
 router.put('/updateQtyMinusLocal/:id', PendingCartController.updateLocalQuantityMinus);
 
 // Orders routes
-router.post('/postMyOrder', MyOrdersController.postMyOrder);
-router.get('/getMyOrder/:id', MyOrdersController.getMyOrder);
-router.get('/cancelOrder/:id', MyOrdersController.cancelOrder);
-router.put('/updateOrderStatus/:id', MyOrdersController.updateOrderStatus);
-router.get('/order/track/:id', MyOrdersController.getOrderById);
+// router.post('/postMyOrder', MyOrdersController.postMyOrder);
+// router.get('/getMyOrder/:id', MyOrdersController.getMyOrder);
+// router.get('/cancelOrder/:id', MyOrdersController.cancelOrder);
+// router.put('/updateOrderStatus/:id', MyOrdersController.updateOrderStatus);
+// router.get('/order/track/:id', MyOrdersController.getOrderById);
 
-router.get('/seller-orders/:sellerId', sellerOrder.getSellerOrder);
-router.put('/updateOrderStatusInSeller/:id', sellerOrder.updateOrderStatus);
+// router.get('/seller-orders/:sellerId', sellerOrder.getSellerOrder);
+// router.put('/updateOrderStatusInSeller/:id', sellerOrder.updateOrderStatus);
+
+router.post('/postOrder', OrderController.postOrder);
+router.post('/getOrders', OrderController.getOrderById);
+router.get('/getMyOrder/:id', OrderController.getMyOrder);
+router.get('/getSellerOrder/:id', OrderController.getSellerOrder);
+router.get('/cancelOrder/:id', OrderController.cancelOrder);
+
+router.get('/updateOrder/:id', TrackOrder.updateOrderStatus);
+router.get('/trackOrder/:id', TrackOrder.getOrderTracking);
 
 module.exports = router;
