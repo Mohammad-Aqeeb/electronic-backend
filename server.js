@@ -9,7 +9,6 @@ const cloudinaryConnect = require("./config/cloudinary");
 require("dotenv").config();
 
 const app = express();
-
 app.use(morgan('combined'));
 
 app.use(fileUpload({
