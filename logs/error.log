@@ -9415,3 +9415,521 @@ STACK: TokenExpiredError: jwt expired
 [2025-05-21T06:34:45.001Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
 [2025-05-21T06:34:45.001Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
 [2025-05-21T06:34:45.004Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T07:03:27.905Z] DEBUG: Register request body: {"name":"a","email":"a@gmail.com","phone":"9887643287","password":"12345678","confirmPassword":"12345678","role":"User"}
+[2025-05-21T07:03:28.110Z] INFO: User registered successfully: a@gmail.com
+[2025-05-21T07:04:57.124Z] DEBUG: Login attempt for email: a@gmail.com
+[2025-05-21T07:04:57.334Z] INFO: User logged in successfully: a@gmail.com
+[2025-05-21T07:09:03.422Z] DEBUG: Login attempt for email: a@gmail.com
+[2025-05-21T07:09:03.611Z] INFO: User logged in successfully: a@gmail.com
+[2025-05-21T07:09:03.656Z] DEBUG: Fetching all items
+[2025-05-21T07:09:03.665Z] INFO: Fetched 7 items successfully
+[2025-05-21T07:09:03.686Z] DEBUG: Decoded token payload: {"email":"a@gmail.com","id":"682d7ac0f91e23627e64b62f","role":"User","iat":1747811343,"exp":1747818543}
+[2025-05-21T07:09:03.697Z] INFO: User authenticated: a@gmail.com (682d7ac0f91e23627e64b62f)
+[2025-05-21T07:09:03.698Z] DEBUG: Fetching all cart data...
+[2025-05-21T07:09:03.702Z] INFO: Fetched cart data for all users
+[2025-05-21T07:10:14.176Z] DEBUG: Decoded token payload: {"email":"a@gmail.com","id":"682d7ac0f91e23627e64b62f","role":"User","iat":1747811343,"exp":1747818543}
+[2025-05-21T07:10:14.182Z] INFO: User authenticated: a@gmail.com (682d7ac0f91e23627e64b62f)
+[2025-05-21T07:10:14.183Z] DEBUG: Profile update request for user ID: 682d7ac0f91e23627e64b62f
+[2025-05-21T07:10:14.205Z] INFO: User profile updated successfully: 682d7ac0f91e23627e64b62f
+[2025-05-21T07:12:19.875Z] DEBUG: Decoded token payload: {"email":"a@gmail.com","id":"682d7ac0f91e23627e64b62f","role":"User","iat":1747811343,"exp":1747818543}
+[2025-05-21T07:12:19.880Z] INFO: User authenticated: a@gmail.com (682d7ac0f91e23627e64b62f)
+[2025-05-21T07:12:19.881Z] DEBUG: Fetching profile for user ID: 682d7ac0f91e23627e64b62f
+[2025-05-21T07:12:19.888Z] INFO: Profile fetched successfully for user ID: 682d7ac0f91e23627e64b62f
+[2025-05-21T07:16:57.730Z] DEBUG: Request recevied for GetAllUsers
+[2025-05-21T07:16:57.741Z] INFO: Users fetched successfuly
+[2025-05-21T07:17:58.517Z] DEBUG: Fetching all items
+[2025-05-21T07:17:58.524Z] INFO: Fetched 7 items successfully
+[2025-05-21T07:27:02.055Z] DEBUG: Fetching item by ID: 6824786a6da16bc0435ccbd2
+[2025-05-21T07:27:02.060Z] INFO: Fetched item: 6824786a6da16bc0435ccbd2 successfully
+[2025-05-21T07:59:59.794Z] DEBUG: Fetching all items
+[2025-05-21T07:59:59.825Z] INFO: Fetched 7 items successfully
+[2025-05-21T07:59:59.863Z] DEBUG: Decoded token payload: {"email":"a@gmail.com","id":"682d7ac0f91e23627e64b62f","role":"User","iat":1747811343,"exp":1747818543}
+[2025-05-21T07:59:59.872Z] INFO: User authenticated: a@gmail.com (682d7ac0f91e23627e64b62f)
+[2025-05-21T07:59:59.873Z] DEBUG: Fetching all cart data...
+[2025-05-21T07:59:59.877Z] INFO: Fetched cart data for all users
+[2025-05-21T08:08:58.705Z] DEBUG: Fetching all items
+[2025-05-21T08:08:58.709Z] INFO: Fetched 7 items successfully
+[2025-05-21T08:09:10.008Z] DEBUG: Login attempt for email: aqeeb2623@gmail.com
+[2025-05-21T08:09:10.011Z] WARN: Login failed: User not found - aqeeb2623@gmail.com
+[2025-05-21T08:09:14.581Z] DEBUG: Login attempt for email: aqeeb@gmail.com
+[2025-05-21T08:09:14.656Z] INFO: User logged in successfully: aqeeb@gmail.com
+[2025-05-21T08:09:14.671Z] DEBUG: Fetching all items
+[2025-05-21T08:09:14.676Z] INFO: Fetched 7 items successfully
+[2025-05-21T08:09:14.684Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:09:14.688Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:09:14.688Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:09:14.689Z] INFO: Fetched cart data for all users
+[2025-05-21T08:09:59.729Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:09:59.741Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:09:59.742Z] DEBUG: Add to cart request received for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:09:59.742Z] DEBUG: Request body: {"item_id":"68247a366da16bc0435ccbe5","item_name":"LED Desk Lamp","item_category":"Home & Living","item_price":24.99,"item_dsc":"Dimmable LED desk lamp with touch control and USB charging port","item_qty":30,"item_image":"https://res.cloudinary.com/dmeqzqsch/image/upload/v1747221047/bqadp8uiveixz4chtbix.jpg","item_discount":""}
+[2025-05-21T08:09:59.773Z] INFO: Item added to cart for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:10:04.637Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:04.639Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:04.640Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:04.641Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:15.341Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:15.343Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:15.343Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:15.352Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:15.357Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:15.360Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:15.361Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:15.362Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:15.556Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:15.560Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:15.560Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:15.563Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:15.570Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:15.573Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:15.573Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:15.575Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:16.068Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.069Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.077Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.082Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.085Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.088Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.088Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:16.089Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:16.221Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.225Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.225Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.231Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.234Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.236Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.236Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:16.237Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:16.387Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.389Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.389Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.392Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.397Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.399Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.399Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:16.401Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:16.549Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.552Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.552Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.558Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.562Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.565Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.565Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:16.567Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:16.702Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.706Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.706Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.709Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.714Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.716Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.716Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:16.718Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:16.843Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.845Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.845Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.847Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.851Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.852Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.853Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:16.854Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:16.991Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:16.993Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:16.993Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.996Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:16.999Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.002Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.002Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:17.004Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:17.137Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.140Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.141Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.144Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.148Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.150Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.151Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:17.152Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:17.291Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.293Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.294Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.296Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.301Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.304Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.304Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:17.305Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:17.439Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.441Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.441Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.447Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.451Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.453Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.455Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:17.456Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:17.613Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.615Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.615Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.618Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.623Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.624Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.625Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:17.626Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:17.779Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.781Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.781Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.785Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.790Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.791Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.791Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:17.794Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:17.934Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.936Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.937Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.939Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:17.942Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:17.945Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:17.945Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:17.948Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:18.088Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:18.089Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:18.089Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:18.093Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:18.097Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:18.099Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:18.099Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:18.101Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:18.254Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:18.256Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:18.256Z] DEBUG: Updating quantity minus of cart data for user: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:18.259Z] INFO: Decreased quantity for cart item: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:18.263Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:18.266Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:18.267Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:18.268Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:19.346Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:19.347Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:19.350Z] INFO: Cart item deleted: 682d8a57c20b3cbae0c3b072
+[2025-05-21T08:10:19.355Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:19.357Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:19.358Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:19.359Z] INFO: Fetched cart data for all users
+[2025-05-21T08:10:30.855Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:30.857Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:30.857Z] DEBUG: Add to cart request received for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:10:30.857Z] DEBUG: Request body: {"item_id":"68247a366da16bc0435ccbe5","item_name":"LED Desk Lamp","item_category":"Home & Living","item_price":24.99,"item_dsc":"Dimmable LED desk lamp with touch control and USB charging port","item_qty":1,"item_image":"https://res.cloudinary.com/dmeqzqsch/image/upload/v1747221047/bqadp8uiveixz4chtbix.jpg","item_discount":""}
+[2025-05-21T08:10:30.860Z] INFO: Item added to cart for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:10:33.902Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:10:33.905Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:10:33.905Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:10:33.907Z] INFO: Fetched cart data for all users
+[2025-05-21T08:12:54.900Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:12:54.912Z] INFO: Fetched cart data for all users
+[2025-05-21T08:13:13.972Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:13:13.974Z] INFO: Fetched cart data for all users
+[2025-05-21T08:19:21.440Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:19:21.453Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:19:21.454Z] DEBUG: Fetching cart data for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:19:21.460Z] INFO: Fetched cart data
+[2025-05-21T08:20:09.899Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:20:09.901Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:20:09.901Z] DEBUG: Updating quantity plus of cart data for user: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:20:09.915Z] INFO: Increased quantity for cart item: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:21:18.646Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:21:18.648Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:21:18.648Z] DEBUG: Updating quantity minus of cart data for user: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:21:18.653Z] INFO: Decreased quantity for cart item: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:21:25.136Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:21:25.138Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:21:25.138Z] DEBUG: Updating quantity plus of cart data for user: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:21:25.142Z] INFO: Increased quantity for cart item: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:21:26.101Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:21:26.103Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:21:26.103Z] DEBUG: Updating quantity plus of cart data for user: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:21:26.107Z] INFO: Increased quantity for cart item: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:21:34.197Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:21:34.199Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:21:34.200Z] DEBUG: Updating quantity minus of cart data for user: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:21:34.203Z] INFO: Decreased quantity for cart item: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:22:36.058Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:22:36.061Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:22:36.062Z] DEBUG: Updating quantity minus of cart data for user: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:22:36.070Z] INFO: Decreased quantity for cart item: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:24:18.175Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:24:18.190Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:24:18.201Z] INFO: Cart item deleted: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:26:10.402Z] DEBUG: Fetching all cart data...
+[2025-05-21T08:26:10.412Z] INFO: Fetched cart data for all users
+[2025-05-21T08:26:15.830Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:26:15.837Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:26:15.838Z] DEBUG: Add to cart request received for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:26:15.839Z] DEBUG: Request body: {"item_id":"68247a366da16bc0435ccbe5","item_name":"LED Desk Lamp","item_category":"Home & Living","item_price":24.99,"item_dsc":"Dimmable LED desk lamp with touch control and USB charging port","item_qty":1,"item_image":"https://res.cloudinary.com/dmeqzqsch/image/upload/v1747221047/bqadp8uiveixz4chtbix.jpg","item_discount":""}
+[2025-05-21T08:26:15.851Z] INFO: Item added to cart for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:27:31.763Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:27:31.765Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:27:31.766Z] DEBUG: Add to cart request received for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:27:31.766Z] DEBUG: Request body: {"item_id":"68247a0a6da16bc0435ccbe2","item_name":"LED Desk Lamp","item_category":"Home & Living","item_price":24.99,"item_dsc":"Dimmable LED desk lamp with touch control and USB charging port","item_qty":1,"item_image":"https://res.cloudinary.com/dmeqzqsch/image/upload/v1747221047/bqadp8uiveixz4chtbix.jpg","item_discount":""}
+[2025-05-21T08:27:31.769Z] INFO: Item added to cart for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:28:47.546Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:28:47.555Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:28:47.555Z] INFO: Truncating cart data for users: 682d8e276d339e9cdc851a73, 682d8e736d339e9cdc851a76
+[2025-05-21T08:30:50.349Z] INFO: Truncating cart data for users: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:36:00.930Z] DEBUG: Fetching item by ID: 68247a366da16bc0435ccbe5
+[2025-05-21T08:36:00.936Z] INFO: Fetched item: 68247a366da16bc0435ccbe5 successfully
+[2025-05-21T08:36:00.962Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:36:00.965Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:36:00.966Z] DEBUG: Placing a new order
+[2025-05-21T08:36:00.967Z] DEBUG: Request body: {"_id":"682d8a76c20b3cbae0c3b0d0","user_id":"682b44d2f4bcfafef5ae1cce","item_id":"68247a366da16bc0435ccbe5","item_name":"LED Desk Lamp","item_category":"Home & Living","item_price":24.99,"item_dsc":"Dimmable LED desk lamp with touch control and USB charging port","item_qty":1,"item_image":"https://res.cloudinary.com/dmeqzqsch/image/upload/v1747221047/bqadp8uiveixz4chtbix.jpg","item_discount":"","item_subtotal":24.99,"createdAt":"2025-05-21T08:10:30.859Z","updatedAt":"2025-05-21T08:10:30.859Z","__v":0,"seller_id":"682b42a8f4bcfafef5ae1ccb"}
+[2025-05-21T08:36:00.981Z] INFO: Order placed successfully
+[2025-05-21T08:36:00.988Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:36:00.991Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:36:00.991Z] DEBUG: Status update request for order ID: 682d90701c5594ecd3072c37 by user 682b44d2f4bcfafef5ae1cce, body: {"status":"Pending","userType":"User"}
+[2025-05-21T08:36:00.994Z] INFO: Order status updated to "Pending" for order ID: 682d90701c5594ecd3072c37 by user 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:36:01.001Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:36:01.006Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:36:01.010Z] INFO: Cart item deleted: 682d8a76c20b3cbae0c3b0d0
+[2025-05-21T08:36:01.026Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:36:01.033Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:36:01.034Z] DEBUG: Fetching orders for user ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:36:01.040Z] INFO: Fetched 3 orders for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:38:55.916Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:38:55.919Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:38:55.920Z] DEBUG: Placing a new order
+[2025-05-21T08:38:55.920Z] DEBUG: Request body: {"seller_id":"682b42a8f4bcfafef5ae1ccb","item_id":"682477f96da16bc0435ccbcf","item_category":"Wearables","item_name":"Smart Watch","item_price":89.99,"item_dsc":"Track your fitness and stay connected with this sleek smartwatch.","item_qty":3,"item_image":"https://res.cloudinary.com/dmeqzqsch/image/upload/v1747220473/vbkclbzz…","item_discount":null,"item_subtotal":269.96999999999997}
+[2025-05-21T08:38:55.926Z] INFO: Order placed successfully
+[2025-05-21T08:39:01.627Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:39:01.629Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:39:01.630Z] DEBUG: Fetching orders for user ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:39:01.633Z] INFO: Fetched 4 orders for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:39:31.130Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:39:31.132Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:39:31.132Z] DEBUG: Fetching orders for user ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:39:31.135Z] INFO: Fetched 2 orders for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:39:38.364Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:39:38.368Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:39:38.370Z] DEBUG: Fetching cart data for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:39:38.373Z] INFO: Fetched cart data
+[2025-05-21T08:39:39.282Z] DEBUG: Fetching all items
+[2025-05-21T08:39:39.286Z] INFO: Fetched 7 items successfully
+[2025-05-21T08:39:39.294Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:39:39.298Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:39:39.298Z] DEBUG: Fetching cart data for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:39:39.303Z] INFO: Fetched cart data
+[2025-05-21T08:39:41.153Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:39:41.156Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:39:41.158Z] DEBUG: Fetching cart data for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:39:41.160Z] INFO: Fetched cart data
+[2025-05-21T08:39:41.799Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:39:41.803Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:39:41.803Z] DEBUG: Fetching orders for user ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:39:41.806Z] INFO: Fetched 2 orders for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:04.397Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:04.400Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:04.400Z] DEBUG: Fetching orders for user ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:04.402Z] INFO: Fetched 1 orders for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:05.190Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:05.192Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:05.194Z] DEBUG: Fetching cart data for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:05.196Z] INFO: Fetched cart data
+[2025-05-21T08:40:06.000Z] DEBUG: Fetching all items
+[2025-05-21T08:40:06.005Z] INFO: Fetched 7 items successfully
+[2025-05-21T08:40:06.012Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:06.016Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:06.016Z] DEBUG: Fetching cart data for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:06.018Z] INFO: Fetched cart data
+[2025-05-21T08:40:07.513Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:07.516Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:07.522Z] DEBUG: Add to cart request received for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:07.523Z] DEBUG: Request body: {"user_id":"682b44d2f4bcfafef5ae1cce","item_id":"682477f96da16bc0435ccbcf","item_name":"Smart Watch","item_category":"Wearables","item_price":89.99,"item_dsc":"Track your fitness and stay connected with this sleek smartwatch.","item_qty":1,"item_image":"https://res.cloudinary.com/dmeqzqsch/image/upload/v1747220473/vbkclbzzafuebsu3zjha.jpg","item_discount":""}
+[2025-05-21T08:40:07.528Z] INFO: Item added to cart for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:07.532Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:07.535Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:07.536Z] DEBUG: Fetching cart data for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:07.538Z] INFO: Fetched cart data
+[2025-05-21T08:40:09.275Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:09.279Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:09.280Z] DEBUG: Fetching cart data for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:09.282Z] INFO: Fetched cart data
+[2025-05-21T08:40:10.502Z] DEBUG: Fetching item by ID: 682477f96da16bc0435ccbcf
+[2025-05-21T08:40:10.505Z] INFO: Fetched item: 682477f96da16bc0435ccbcf successfully
+[2025-05-21T08:40:10.515Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:10.518Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:10.519Z] DEBUG: Placing a new order
+[2025-05-21T08:40:10.519Z] DEBUG: Request body: {"_id":"682d91671c5594ecd3072c58","user_id":"682b44d2f4bcfafef5ae1cce","item_id":"682477f96da16bc0435ccbcf","item_name":"Smart Watch","item_category":"Wearables","item_price":89.99,"item_dsc":"Track your fitness and stay connected with this sleek smartwatch.","item_qty":1,"item_image":"https://res.cloudinary.com/dmeqzqsch/image/upload/v1747220473/vbkclbzzafuebsu3zjha.jpg","item_discount":"","item_subtotal":89.99,"createdAt":"2025-05-21T08:40:07.525Z","updatedAt":"2025-05-21T08:40:07.525Z","__v":0,"seller_id":"682b42a8f4bcfafef5ae1ccb"}
+[2025-05-21T08:40:10.523Z] INFO: Order placed successfully
+[2025-05-21T08:40:10.533Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:10.547Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:10.547Z] DEBUG: Status update request for order ID: 682d916a1c5594ecd3072c60 by user 682b44d2f4bcfafef5ae1cce, body: {"status":"Pending","userType":"User"}
+[2025-05-21T08:40:10.550Z] INFO: Order status updated to "Pending" for order ID: 682d916a1c5594ecd3072c60 by user 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:10.555Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:10.556Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:10.561Z] INFO: Cart item deleted: 682d91671c5594ecd3072c58
+[2025-05-21T08:40:10.575Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:40:10.578Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:40:10.579Z] DEBUG: Fetching orders for user ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:40:10.581Z] INFO: Fetched 2 orders for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:41:44.185Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:41:44.187Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:41:44.187Z] DEBUG: Fetching order by ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:41:44.189Z] INFO: Fetched order: 682d90701c5594ecd3072c37
+[2025-05-21T08:43:05.594Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:43:05.596Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:43:05.599Z] DEBUG: Fetching orders for user ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:43:05.602Z] INFO: Fetched 2 orders for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:43:50.936Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:43:50.937Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:43:50.938Z] DEBUG: Fetching orders for seller ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:43:50.941Z] INFO: Fetched 0 orders for seller: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:44:23.089Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:44:23.091Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:44:23.092Z] DEBUG: Fetching order by ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:44:23.093Z] INFO: Fetched order: 682d90701c5594ecd3072c37
+[2025-05-21T08:44:29.301Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:44:29.303Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:44:29.304Z] DEBUG: Fetching orders for seller ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:44:29.305Z] INFO: Fetched 0 orders for seller: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:45:36.837Z] DEBUG: Request recevied for GetAllOrder
+[2025-05-21T08:45:36.853Z] INFO: Order fetched successfuly
+[2025-05-21T08:49:56.420Z] WARN: Authorization token missing in request headers
+[2025-05-21T08:50:19.634Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:50:19.637Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:50:19.637Z] DEBUG: Status update request for order ID: 682d90701c5594ecd3072c37 by user 682b44d2f4bcfafef5ae1cce, body: {"status":"Cancelled","userType":"User"}
+[2025-05-21T08:50:19.640Z] INFO: Order status updated to "Cancelled" for order ID: 682d90701c5594ecd3072c37 by user 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:51:13.946Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:51:13.948Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:51:13.948Z] DEBUG: Fetching tracking info for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:13.957Z] INFO: Tracking info fetched for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:27.984Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:51:27.988Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:51:27.990Z] DEBUG: Fetching tracking info for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:27.997Z] INFO: Tracking info fetched for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:28.987Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:51:28.989Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:51:28.990Z] DEBUG: Fetching tracking info for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:28.993Z] INFO: Tracking info fetched for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:29.992Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:51:29.995Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:51:29.995Z] DEBUG: Fetching tracking info for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:29.997Z] INFO: Tracking info fetched for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:30.155Z] DEBUG: Decoded token payload: {"email":"aqeeb@gmail.com","id":"682b44d2f4bcfafef5ae1cce","role":"user","iat":1747814954,"exp":1747822154}
+[2025-05-21T08:51:30.158Z] INFO: User authenticated: aqeeb@gmail.com (682b44d2f4bcfafef5ae1cce)
+[2025-05-21T08:51:30.158Z] DEBUG: Fetching orders for user ID: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:51:30.162Z] INFO: Fetched 2 orders for user: 682b44d2f4bcfafef5ae1cce
+[2025-05-21T08:51:37.017Z] ERROR: Token verification failed jwt expired
+STACK: TokenExpiredError: jwt expired
+    at C:\Electronic\Backend\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Electronic\Backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Electronic\Backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at authMiddleware (C:\Electronic\Backend\middleware\auth.js:19:25)
+    at Layer.handleRequest (C:\Electronic\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Electronic\Backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Electronic\Backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Electronic\Backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Electronic\Backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Electronic\Backend\node_modules\router\index.js:295:15
+[2025-05-21T08:51:38.810Z] WARN: Authorization token missing in request headers
+[2025-05-21T08:51:47.041Z] DEBUG: Login attempt for email: abc@gmail.com
+[2025-05-21T08:51:47.112Z] INFO: User logged in successfully: abc@gmail.com
+[2025-05-21T08:51:47.171Z] DEBUG: Fetching all items
+[2025-05-21T08:51:47.173Z] INFO: Fetched 7 items successfully
+[2025-05-21T08:51:47.187Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:47.190Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:47.190Z] DEBUG: Fetching cart data for user: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:51:47.192Z] INFO: Fetched cart data
+[2025-05-21T08:51:50.758Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:50.760Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:50.760Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:51:50.764Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:51:52.766Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:52.769Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:52.769Z] DEBUG: Fetching tracking info for order ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:52.777Z] INFO: Tracking info fetched for order ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:52.783Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:52.785Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:52.785Z] DEBUG: Fetching order by ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:52.786Z] INFO: Fetched order: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:53.764Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:53.766Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:53.766Z] DEBUG: Fetching tracking info for order ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:53.769Z] INFO: Tracking info fetched for order ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:53.773Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:53.775Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:53.776Z] DEBUG: Fetching order by ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:53.778Z] INFO: Fetched order: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:54.770Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:54.771Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:54.771Z] DEBUG: Fetching tracking info for order ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:54.775Z] INFO: Tracking info fetched for order ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:54.781Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:54.784Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:54.784Z] DEBUG: Fetching order by ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:54.785Z] INFO: Fetched order: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:55.776Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:55.778Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:55.778Z] DEBUG: Fetching tracking info for order ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:55.780Z] INFO: Tracking info fetched for order ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:55.786Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:55.787Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:55.788Z] DEBUG: Fetching order by ID: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:55.790Z] INFO: Fetched order: 682d916a1c5594ecd3072c60
+[2025-05-21T08:51:55.988Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:55.992Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:55.992Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:51:55.994Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:51:57.164Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:57.166Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:57.166Z] DEBUG: Fetching tracking info for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:57.171Z] INFO: Tracking info fetched for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:57.177Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:57.179Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:57.179Z] DEBUG: Fetching order by ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:57.180Z] INFO: Fetched order: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:58.168Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:58.170Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:58.170Z] DEBUG: Fetching tracking info for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:58.174Z] INFO: Tracking info fetched for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:58.178Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:58.181Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:58.181Z] DEBUG: Fetching order by ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:58.182Z] INFO: Fetched order: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:59.157Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:59.159Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:59.159Z] DEBUG: Fetching tracking info for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:59.162Z] INFO: Tracking info fetched for order ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:59.168Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:51:59.171Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:51:59.172Z] DEBUG: Fetching order by ID: 682d90701c5594ecd3072c37
+[2025-05-21T08:51:59.173Z] INFO: Fetched order: 682d90701c5594ecd3072c37
+[2025-05-21T08:52:00.038Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:52:00.041Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:52:00.041Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:00.043Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:10.992Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:52:10.993Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:52:10.994Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:10.995Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:20.993Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:52:20.995Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:52:20.995Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:20.997Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:30.997Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:52:30.999Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:52:30.999Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:31.000Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:41.011Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:52:41.014Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:52:41.015Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:41.017Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:51.001Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:52:51.008Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:52:51.009Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:52:51.011Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:53:00.997Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:53:00.999Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:53:00.999Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:53:01.000Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:53:10.998Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:53:11.000Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:53:11.001Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:53:11.002Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:53:51.560Z] DEBUG: Decoded token payload: {"email":"abc@gmail.com","id":"682b42a8f4bcfafef5ae1ccb","role":"seller","iat":1747817507,"exp":1747824707}
+[2025-05-21T08:53:51.566Z] INFO: User authenticated: abc@gmail.com (682b42a8f4bcfafef5ae1ccb)
+[2025-05-21T08:53:51.568Z] DEBUG: Fetching orders for seller ID: 682b42a8f4bcfafef5ae1ccb
+[2025-05-21T08:53:51.574Z] INFO: Fetched 2 orders for seller: 682b42a8f4bcfafef5ae1ccb
