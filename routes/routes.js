@@ -4,60 +4,40 @@ const router = express.Router();
 const itemsController = require('../controllers/itemsController.js');
 const AddProductController = require('../controllers/AddProductController.js');
 const AddToCartController = require('../controllers/AddToCartController.js');
-const UserController = require('../controllers/UserController.js');
-const SellerController = require('../controllers/SellerController.js');
 const UsersController = require("../controllers/UsersController.js");
 const PendingCartController = require('../controllers/PendingCartController.js');
-const MyOrdersController = require('../controllers/MyOrdersControlle.js');
-const sellerOrder = require('../controllers/sellerOrder.js');
 const OrderController = require('../controllers/OrderController.js');
 const TrackOrder = require("../controllers/TrackOrderController.js");
 
 const auth = require("../middleware/auth.js");
 
-// User routes
-// router.post('/userSignup', UserController.userRegister);
-// router.post('/userLogin', UserController.userLogin);
-// router.put('/editUserProfile/:id', UserController.editProfile);
-// router.get('/getUserProfile/:id', UserController.getProfile);
-
-// // Seller routes
-// router.post('/sellerSignup', SellerController.sellerRegister);
-// router.post('/sellerLogin', SellerController.sellerLogin);
-// router.put('/editSellerProfile/:id', SellerController.editProfile);
-// router.get('/getSellerProfile/:id', SellerController.getProfile);
-// router.post('/addProduct', SellerController.addProduct);
-
 //users routes
 router.post('/userSignup', UsersController.userRegister);
 router.post('/userLogin', UsersController.userLogin);
-router.put('/editUserProfile/:id', UsersController.editProfile);
-router.get('/getUserProfile', auth,  UsersController.getProfile);
-
+router.put('/editUserProfile', auth, UsersController.editProfile);
+router.get('/getUserProfile', auth, UsersController.getProfile);
+router.get('/getAllUsers', UsersController.getAllUsers);                                    //admin ke liye auth nahi lagaya
 
 // Item routes
-router.post('/itemPost', itemsController.postData);
+router.post('/itemPost', auth, itemsController.postData);
 router.get('/itemGet', itemsController.getData);
-router.get('/editProduct/:id', itemsController.editProduct);
-router.put('/updateProduct/:id', itemsController.updateProducts);
-router.delete('/deleteProduct/:id', itemsController.deleteProduct);
-
-
-
+router.get('/itemGet/:id', itemsController.editProduct);
+router.put('/updateProduct/:id', auth, itemsController.updateProducts);
+router.delete('/deleteProduct/:id', auth, itemsController.deleteProduct);
 
 // AddProduct routes
 router.post('/addProduct',auth , AddProductController.addProduct);
-router.put('/updateProduct/:id', AddProductController.updateProduct);
-router.delete('/deleteProductByID/:id', AddProductController.deleteProductByID);
+router.put('/updateAddToCartProduct/:id', auth, AddProductController.updateProduct);
+router.delete('/deleteProductByID/:id',auth, AddProductController.deleteProductByID);
 
 // Cart routes
-router.post('/addCart', AddToCartController.addToCart);
-router.get('/getCartData', AddToCartController.getCartData);
-router.get('/getCartData/:id', AddToCartController.getCartDataByUserId);
-router.put('/updateQtyPlus/:id', AddToCartController.updateQuantityPlus);
-router.put('/updateQtyMinus/:id', AddToCartController.updateQuantityMinus);
-router.delete('/deleteCartItem/:id', AddToCartController.deleteCartItem)
-router.get('/addToCartsTruncate/:id', AddToCartController.truncateTable);
+router.post('/addCart', auth, AddToCartController.addToCart);
+router.get('/getCartData', auth, AddToCartController.getCartData);
+router.get('/getCartData', auth, AddToCartController.getCartDataByUserId);                    //       
+router.put('/updateQtyPlus/:id', auth, AddToCartController.updateQuantityPlus);
+router.put('/updateQtyMinus/:id', auth, AddToCartController.updateQuantityMinus);
+router.delete('/deleteCartItem/:id', auth, AddToCartController.deleteCartItem);
+router.get('/addToCartsTruncate/:id', auth, AddToCartController.truncateTable);
 
 // Pending cart routes
 router.post('/addPending', PendingCartController.addPendingCarts);
@@ -67,23 +47,13 @@ router.get('/getLocalData', PendingCartController.getLocalcartData);
 router.put('/updateQtyPlusLocal/:id', PendingCartController.updateLocalQuantityPlus);
 router.put('/updateQtyMinusLocal/:id', PendingCartController.updateLocalQuantityMinus);
 
-// Orders routes
-// router.post('/postMyOrder', MyOrdersController.postMyOrder);
-// router.get('/getMyOrder/:id', MyOrdersController.getMyOrder);
-// router.get('/cancelOrder/:id', MyOrdersController.cancelOrder);
-// router.put('/updateOrderStatus/:id', MyOrdersController.updateOrderStatus);
-// router.get('/order/track/:id', MyOrdersController.getOrderById);
+router.post('/postOrder', auth, OrderController.postOrder);
+router.get('/getOrderById/:id', auth, OrderController.getOrderById);
+router.get('/getMyOrder', auth, OrderController.getMyOrder);
+router.get('/getSellerOrder', auth, OrderController.getSellerOrder);
+router.get('/getAllOrders', OrderController.getAllOrders);                                  //admin ke liye auth nahi lagaya
 
-// router.get('/seller-orders/:sellerId', sellerOrder.getSellerOrder);
-// router.put('/updateOrderStatusInSeller/:id', sellerOrder.updateOrderStatus);
-
-router.post('/postOrder', OrderController.postOrder);
-router.post('/getOrders', OrderController.getOrderById);
-router.get('/getMyOrder/:id', OrderController.getMyOrder);
-router.get('/getSellerOrder/:id', OrderController.getSellerOrder);
-router.get('/cancelOrder/:id', OrderController.cancelOrder);
-
-router.get('/updateOrder/:id', TrackOrder.updateOrderStatus);
-router.get('/trackOrder/:id', TrackOrder.getOrderTracking);
+router.post('/updateOrder/:id', auth, TrackOrder.updateOrderStatus);
+router.get('/trackOrder/:id', auth, TrackOrder.getOrderTracking);
 
 module.exports = router;
