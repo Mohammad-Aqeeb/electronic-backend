@@ -9,11 +9,13 @@ const cloudinaryConnect = require("./config/cloudinary");
 require("dotenv").config();
 
 const app = express();
+
+app.use(morgan('combined'));
+
 app.use(fileUpload({
     useTempFiles : true,
     tempFileDir : '/temp'
 }));
-
 
 app.use(express.json());
 app.use(cors());
