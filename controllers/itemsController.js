@@ -1,22 +1,29 @@
-const Item = require('../model/Item'); // Import your Mongoose model
+const logger = require('../config/logger');
+const Item = require('../model/Item');
 
 const itemsController = {
 
   // Post New Item
   postData: async (req, res) => {
     try {
-        const {item_name, item_category, item_price, item_discount, item_image, item_dsc, item_qty} = req.body;
-      
-        const item = await Item.create({ item_name, item_category, item_price, item_discount, item_image, item_dsc, item_qty});
+        const seller_id = req.user._id;
+        const { item_name, item_category, item_price, item_discount, item_image, item_dsc, item_qty } = req.body;
 
+        logger.debug('Posting a new item');
+        logger.debug(`Request body: ${JSON.stringify(req.body)}`);
+
+        const item = await Item.create({ seller_id, item_name, item_category, item_price, item_discount, item_image, item_dsc, item_qty });
+
+        logger.info('Item posted successfully');
         return res.status(201).json({
             message: "Item Has Been Posted",
             data: item
         });
 
     } catch (error) {
+        logger.error('Failed to post item', error);
         return res.status(500).json({
-            success : true,
+            success: false,
             message: "Failed to post item",
             error: error.message
         });
@@ -26,17 +33,19 @@ const itemsController = {
   // Get All Items
   getData: async (req, res) => {
     try {
-
+      logger.debug('Fetching all items');
+      
       const items = await Item.find({});
       
+      logger.info(`Fetched ${items.length} items successfully`);
       return res.status(200).json({
-        success : true,
+        success: true,
         data: items,
-        message: "fetched items successfuly"
+        message: "Fetched items successfully"
       });
 
     } catch (error) {
-      
+        logger.error('Failed to fetch items', error);
         return res.status(500).json({
             message: "Failed to fetch items",
             error: error.message
@@ -47,17 +56,30 @@ const itemsController = {
   // Get Single Item by ID
   editProduct: async (req, res) => {
     try {
-      const item = await Item.findById(req.params.id);
+      const itemId = req.params.id;
+      logger.debug(`Fetching item by ID: ${itemId}`);
 
+      const item = await Item.findById(itemId);
+
+      if (!item) {
+        logger.warn(`Item not found: ${itemId}`);
+        return res.status(404).json({
+          success: false,
+          message: "Item not found"
+        });
+      }
+
+      logger.info(`Fetched item: ${itemId} successfully`);
       return res.status(200).json({
-        success : true,
-        message: "fetched item successfuly",
+        success: true,
+        message: "Fetched item successfully",
         data: item
       });
 
     } catch (error) {
+      logger.error('Failed to fetch item', error);
       return res.status(500).json({
-        success : false,
+        success: false,
         message: "Failed to fetch item",
         error: error.message
       });
@@ -68,8 +90,20 @@ const itemsController = {
   updateProducts: async (req, res) => {
     try {
         const id = req.params.id;
-        const {item_name, item_category, item_price, item_discount, item_dsc, item_image, item_qty} = req.body;
+        const { item_name, item_category, item_price, item_discount, item_dsc, item_image, item_qty } = req.body;
+
+        logger.debug(`Updating item with ID: ${id}`);
+        logger.debug(`Request body: ${JSON.stringify(req.body)}`);
+
         const item = await Item.findById(id);
+
+        if (!item) {
+          logger.warn(`Item not found for update: ${id}`);
+          return res.status(404).json({
+            success: false,
+            message: "Item not found"
+          });
+        }
 
         item.item_name = item_name;
         item.item_category = item_category;
@@ -79,17 +113,19 @@ const itemsController = {
         item.item_image = item_image;
         item.item_qty = item_qty;
 
-        const updatedItem = await Item.findByIdAndUpdate({_id : id}, item, {new : true});
+        const updatedItem = await Item.findByIdAndUpdate({_id: id}, item, {new: true});
 
+        logger.info(`Item updated successfully: ${id}`);
         return res.status(200).json({
-            success :true,
+            success: true,
             data: updatedItem,
             message: "Updated Successfully"
         });
 
     } catch (error) {
+        logger.error('Failed to update item', error);
         return res.status(500).json({
-            success : false,
+            success: false,
             message: "Failed to update item",
             error: error.message
         });
@@ -99,21 +135,27 @@ const itemsController = {
   // Delete Item
   deleteProduct: async (req, res) => {
     try {
-        const deleted = await Item.findByIdAndDelete(req.params.id);
+        const itemId = req.params.id;
+        logger.debug(`Deleting item with ID: ${itemId}`);
+
+        const deleted = await Item.findByIdAndDelete(itemId);
 
         if (!deleted) {
+            logger.warn(`Item not found for deletion: ${itemId}`);
             return res.status(404).json({
-                success : false,
+                success: false,
                 message: "Item not found"
             });
         }
 
+        logger.info(`Item deleted successfully: ${itemId}`);
         return res.status(200).json({
-            success : true,
+            success: true,
             message: "Item Has Been Deleted" 
         });
 
     } catch (error) {
+        logger.error('Failed to delete item', error);
         return res.status(500).json({
             message: "Failed to delete item",
             error: error.message
