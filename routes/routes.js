@@ -22,22 +22,22 @@ router.get('/getAllUsers', UsersController.getAllUsers);                        
 router.post('/itemPost', auth, itemsController.postData);
 router.get('/itemGet', itemsController.getData);
 router.get('/itemGet/:id', itemsController.editProduct);
-router.put('/updateProduct/:id', auth, itemsController.updateProducts);
+router.put('/updateitem/:id', auth, itemsController.updateProducts);
 router.delete('/deleteProduct/:id', auth, itemsController.deleteProduct);
 
 // AddProduct routes
 router.post('/addProduct',auth , AddProductController.addProduct);
-router.put('/updateAddToCartProduct/:id', auth, AddProductController.updateProduct);
+router.put('/updateProduct/:id', auth, AddProductController.updateProduct);
 router.delete('/deleteProductByID/:id',auth, AddProductController.deleteProductByID);
 
 // Cart routes
 router.post('/addCart', auth, AddToCartController.addToCart);
-router.get('/getCartData', auth, AddToCartController.getCartData);
-router.get('/getCartData', auth, AddToCartController.getCartDataByUserId);                    //       
+router.get('/getAllCartData', AddToCartController.getCartData);                             //admin ke liye auth nahi lagaya
+router.get('/getCartData', auth, AddToCartController.getCartDataByUserId);      
 router.put('/updateQtyPlus/:id', auth, AddToCartController.updateQuantityPlus);
 router.put('/updateQtyMinus/:id', auth, AddToCartController.updateQuantityMinus);
 router.delete('/deleteCartItem/:id', auth, AddToCartController.deleteCartItem);
-router.get('/addToCartsTruncate/:id', auth, AddToCartController.truncateTable);
+router.delete('/addToCartsTruncate/:id', AddToCartController.truncateTable);
 
 // Pending cart routes
 router.post('/addPending', PendingCartController.addPendingCarts);
