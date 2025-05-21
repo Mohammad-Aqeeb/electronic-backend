@@ -33,6 +33,7 @@ const UsersSchema = new mongoose.Schema({
 
   role : {
     type : String,
+    enum : ["User", "Seller"],
     require : true
   }
 }, {
