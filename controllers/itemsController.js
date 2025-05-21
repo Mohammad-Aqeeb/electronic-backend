@@ -105,13 +105,13 @@ const itemsController = {
           });
         }
 
-        item.item_name = item_name;
-        item.item_category = item_category;
-        item.item_price = item_price;
-        item.item_discount = item_discount;
-        item.item_dsc = item_dsc;
-        item.item_image = item_image;
-        item.item_qty = item_qty;
+        item.item_name = item_name || item.item_name;
+        item.item_category = item_category || item.item_category;
+        item.item_price = item_price || item.item_price;
+        item.item_discount = item_discount || item.item_discount;
+        item.item_dsc = item_dsc || item.item_dsc;
+        item.item_image = item_image || item.item_image;
+        item.item_qty = item_qty || item.item_qty;
 
         const updatedItem = await Item.findByIdAndUpdate({_id: id}, item, {new: true});
 
