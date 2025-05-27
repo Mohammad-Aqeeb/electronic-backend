@@ -162,7 +162,6 @@ const itemsController = {
         });
     }
   }
-
 };
 
 module.exports = itemsController;
