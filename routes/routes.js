@@ -27,6 +27,7 @@ router.delete('/deleteProduct/:id', auth, itemsController.deleteProduct);
 
 // AddProduct routes
 router.post('/addProduct',auth , AddProductController.addProduct);
+router.get('/geProductsBySellerID',auth, AddProductController.geProductsBySellerID);        //add new route
 router.put('/updateProduct/:id', auth, AddProductController.updateProduct);
 router.delete('/deleteProductByID/:id',auth, AddProductController.deleteProductByID);
 
