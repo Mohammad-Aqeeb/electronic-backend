@@ -131,7 +131,39 @@ const AddProductController = {
         error: error.message
       });
     }
-  }
+  },
+
+  //get product by seller Id
+  geProductsBySellerID: async (req, res) => {
+    const { id } = req.user;
+    logger.debug(`Get Product Request - ID: ${id}`);
+
+    try {
+      const data = await AddProduct.find({seller_id : id});
+
+      if (!res) {
+        logger.warn(`Products not found for seller ${id}`);
+        return res.status(404).json({
+          success: false,
+          message: "Products not found for seller"
+        });
+      }
+
+      return res.status(200).json({
+        success: true,
+        data : data,
+        message: "Product fetched successfully"
+      });
+
+    } catch (error) {
+      logger.error(`Failed to fetch product`, error);
+      return res.status(500).json({
+        success: false,
+        message: "Failed to fetch product",
+        error: error.message
+      });
+    }
+  },
 };
 
 module.exports = AddProductController;
